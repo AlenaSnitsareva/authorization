@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="preload"
+      href="../fonts/OpenSans-Bold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="../fonts/OpenSansRegular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="../fonts/OpenSansSemiBold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script defer src="./js/main.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h2 id="title" class="form-title">Авторизация</h2>
+      <form id="form" class="form">
+        <input
+          class="register input"
+          name="user"
+          type="text"
+          style="display: none"
+          placeholder="Ваше имя"
+        />
+        <input
+          class="authorization forgot register input"
+          name="email"
+          type="email"
+          placeholder="Email"
+          required
+        />
+        <input
+          class="authorization register input"
+          name="password"
+          type="password"
+          placeholder="Пароль"
+          required
+        />
+        <input
+          class="register input"
+          name="repeat"
+          type="password"
+          style="display: none"
+          placeholder="Повторите пароль"
+        />
+        <label class="label-checkbox">
+          <input
+            class="authorization register checkbox"
+            name="checkbox"
+            type="checkbox"
+          />
+          <span>Запомнить меня на этом компьютере</span>
+        </label>
+        <div id="errors" class="errors"></div>
+        <button
+          class="authorization forgot register btn-reset submit"
+          name="submit"
+          type="submit"
+        >
+          Войти
+        </button>
+      </form>
+      <ul class="link-list">
+        <li class="link-item">
+          <a href="?modal=forgot" class="authorization register link"
+            >Забыли свой пароль?</a
+          >
+        </li>
+        <li class="link-item">
+          <a href="?modal=register" class="authorization forgot link"
+            >Зарегистрироваться</a
+          >
+        </li>
+        <li class="link-item">
+          <a
+            href="?modal=authorization"
+            class="forgot register link"
+            style="display: none"
+            >Авторизация</a
+          >
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
